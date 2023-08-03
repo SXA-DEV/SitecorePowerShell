@@ -4,7 +4,7 @@ using System.Runtime.InteropServices;
 
 [assembly: AssemblyVersion("6.4.0.*")]
 [assembly: AssemblyFileVersion("6.4.0.0")]
-[assembly: AssemblyInformationalVersion("6.4.0.0 Hotfix 564650-1")]
+[assembly: AssemblyInformationalVersion("6.4.0.0 Hotfix 591011-1")]
 
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Sitecore PowerShell Extensions Team")]

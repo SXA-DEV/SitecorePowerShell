@@ -19,7 +19,7 @@ namespace Spe.Client.Applications.UploadFile.Validation
 
         public UploadLocationValidator(IEnumerable<string> allowedLocations)
         {
-            var _webRootPath = HttpContext.Current.Server.MapPath("\\");
+            _webRootPath = HttpContext.Current.Server.MapPath("\\");
 
             // Convert relative paths to absolute paths
             _allowedLocations = allowedLocations
@@ -34,7 +34,7 @@ namespace Spe.Client.Applications.UploadFile.Validation
             string fullPath;
             try
             {
-                fullPath = Path.GetFullPath(Path.IsPathRooted(userDefinedPath) ? userDefinedPath : Path.Combine(_webRootPath, userDefinedPath));
+                fullPath = GetFullPath(userDefinedPath);
             }
             catch (Exception)
             {
@@ -42,6 +42,11 @@ namespace Spe.Client.Applications.UploadFile.Validation
             }
 
             return _allowedLocations.Any(allowedPath => fullPath.StartsWith(allowedPath, StringComparison.OrdinalIgnoreCase));
+        }
+
+        public string GetFullPath(string path)
+        {
+            return Path.GetFullPath(Path.IsPathRooted(path) ? path : Path.Combine(_webRootPath, path));
         }
     }
 }

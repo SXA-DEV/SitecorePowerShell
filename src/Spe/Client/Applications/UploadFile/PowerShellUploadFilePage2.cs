@@ -70,6 +70,7 @@ namespace Spe.Client.Applications.UploadFile
                         uploadArgs.FileOnly = true;
                         string[] allowedLocations = Factory.GetStringSet("powershell/uploadFile/allowedLocations/path").ToArray();
                         var validator = new UploadLocationValidator(allowedLocations);
+                        pathOrId = validator.GetFullPath(pathOrId);
                         if (!validator.Validate(pathOrId))
                         {
                             CancelResult();

@@ -4,7 +4,7 @@ using System.Runtime.InteropServices;
 
 [assembly: AssemblyVersion("8.0.0.*")]
 [assembly: AssemblyFileVersion("8.0.0.0")]
-[assembly: AssemblyInformationalVersion("8.0.0.0")]
+[assembly: AssemblyInformationalVersion("8.0.0.0 Hotfix FCA-240-1")]
 [assembly: AssemblyMetadata("BetaVersion", "")]
 [assembly: AssemblyMetadata("CodeName", "Wayward Son")]
 
